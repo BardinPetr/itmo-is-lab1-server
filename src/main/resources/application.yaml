@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: lab1
+
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+        globally_quoted_identifiers_skip_column_definitions: true
+#        envers:
+#          audit_table_suffix: _AUDIT
+#          revision_field_name: REVISION_ID
+#          revision_type_field_name: REVISION_TYPE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/lab1
+    username: postgres
+    password: postgres
+
+  data:
+    rest:
+      detection-strategy: annotated
+      base-path: /api
+
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+
+  jackson:
+    deserialization:
+      accept-empty-string-as-null-object: false
+      accept-empty-array-as-null-object: false
+      fail-on-null-for-primitives: true
+
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    path: /
+
+security:
+  basic:
+    enable: false
+  ignored: /**
