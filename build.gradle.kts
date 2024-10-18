@@ -5,19 +5,14 @@ plugins {
     id("org.springframework.boot") version "3.3.4"
     id("io.spring.dependency-management") version "1.1.6"
 
-    kotlin("plugin.jpa") version "1.9.25"
-
     id("org.openapi.generator") version "7.1.0"
+    id("org.liquibase.gradle") version "2.2.0"
+    kotlin("plugin.jpa") version "1.9.25"
 }
 
 group = "ru.bardinpetr.itmo"
 version = "0.1.0"
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
-}
 
 configurations {
     compileOnly {
@@ -38,12 +33,14 @@ dependencies {
 
     // data
     implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa"  )
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.liquibase:liquibase-core")
     runtimeOnly("org.postgresql:postgresql")
     implementation("org.modelmapper:modelmapper:3.2.0")
     implementation("org.hibernate:hibernate-envers:7.0.0.Beta1")
+//    implementation("org.springframework.data:spring-data-envers")
 
     // security
     implementation("org.springframework.boot:spring-boot-starter-security")
@@ -70,6 +67,7 @@ dependencies {
 }
 
 kotlin {
+    jvmToolchain(21)
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")
     }

@@ -5,20 +5,27 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     properties:
       hibernate:
         globally_quoted_identifiers: true
         globally_quoted_identifiers_skip_column_definitions: true
-#        envers:
-#          audit_table_suffix: _AUDIT
-#          revision_field_name: REVISION_ID
-#          revision_type_field_name: REVISION_TYPE
+        format_sql: true
+      org.hibernate:
+        envers:
+          audit_table_suffix: _audit
+          revision_field_name: revision_id
+          revision_type_field_name: revision_type
+    show-sql: false
+
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/lab1
     username: postgres
     password: postgres
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
 
   data:
     rest:

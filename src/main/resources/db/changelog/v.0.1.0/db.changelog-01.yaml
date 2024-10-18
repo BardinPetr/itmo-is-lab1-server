@@ -1,0 +1,473 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1729251491865-1
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_address_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_address_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: street
+                  type: VARCHAR(255)
+              - column:
+                  name: town_id
+                  type: BIGINT
+            tableName: address_audit
+  - changeSet:
+      id: 1729251491865-2
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_location_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_location_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: x
+                  type: BIGINT
+              - column:
+                  name: y
+                  type: INT
+              - column:
+                  name: z
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+            tableName: location_audit
+  - changeSet:
+      id: 1729251491865-3
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_organizations_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_organizations_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: official_address_id
+                  type: BIGINT
+              - column:
+                  name: annual_turnover
+                  type: FLOAT
+              - column:
+                  name: employees_count
+                  type: BIGINT
+              - column:
+                  name: full_name
+                  type: VARCHAR(255)
+              - column:
+                  name: type
+                  type: VARCHAR(255)
+              - column:
+                  name: postal_address_id
+                  type: BIGINT
+            tableName: organizations_audit
+  - changeSet:
+      id: 1729251491865-4
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_person_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_person_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: eye_color
+                  type: VARCHAR(255)
+              - column:
+                  name: hair_color
+                  type: VARCHAR(255)
+              - column:
+                  name: location_id
+                  type: BIGINT
+              - column:
+                  name: height
+                  type: DOUBLE
+              - column:
+                  name: nationality
+                  type: VARCHAR(255)
+            tableName: person_audit
+  - changeSet:
+      id: 1729251491865-5
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_product_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_product_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: creation_date
+                  type: DATE
+              - column:
+                  name: unit_of_measure
+                  type: VARCHAR(255)
+              - column:
+                  name: manufacturer_id
+                  type: BIGINT
+              - column:
+                  name: price
+                  type: FLOAT
+              - column:
+                  name: manufacture_cost
+                  type: DOUBLE
+              - column:
+                  name: rating
+                  type: BIGINT
+              - column:
+                  name: part_number
+                  type: VARCHAR(255)
+              - column:
+                  name: owner_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: x
+                  type: FLOAT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: y
+                  type: INT
+            tableName: product_audit
+  - changeSet:
+      id: 1729251491865-6
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_user_audit
+                  name: revision_id
+                  type: INT
+              - column:
+                  name: revision_type
+                  type: SMALLINT
+              - column:
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: pk_user_audit
+                  name: id
+                  type: BIGINT
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+              - column:
+                  name: password_hash
+                  type: VARCHAR(255)
+              - column:
+                  name: role
+                  type: VARCHAR(255)
+            tableName: user_audit
+  - changeSet:
+      id: 1729251491865-7
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: address_audit
+            constraintName: FK_ADDRESS_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-8
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: location_audit
+            constraintName: FK_LOCATION_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-9
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: organizations_audit
+            constraintName: FK_ORGANIZATIONS_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-10
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: person_audit
+            constraintName: FK_PERSON_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-11
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: product_audit
+            constraintName: FK_PRODUCT_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-12
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: revision_id
+            baseTableName: user_audit
+            constraintName: FK_USER_AUDIT_ON_REVISION
+            referencedColumnNames: rev
+            referencedTableName: revinfo
+  - changeSet:
+      id: 1729251491865-13
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: address_aud
+            constraintName: fk_address_aud_on_rev
+  - changeSet:
+      id: 1729251491865-14
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: audit_aud
+            constraintName: fk_audit_aud_on_rev
+  - changeSet:
+      id: 1729251491865-15
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: audit
+            constraintName: fk_audit_on_user
+  - changeSet:
+      id: 1729251491865-16
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: location_aud
+            constraintName: fk_location_aud_on_rev
+  - changeSet:
+      id: 1729251491865-17
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: organizations_aud
+            constraintName: fk_organizations_aud_on_rev
+  - changeSet:
+      id: 1729251491865-18
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: person_aud
+            constraintName: fk_person_aud_on_rev
+  - changeSet:
+      id: 1729251491865-19
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: product_aud
+            constraintName: fk_product_aud_on_rev
+  - changeSet:
+      id: 1729251491865-20
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: user_aud
+            constraintName: fk_user_aud_on_rev
+  - changeSet:
+      id: 1729251491865-21
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: spring_session_attributes
+            constraintName: spring_session_attributes_fk
+  - changeSet:
+      id: 1729251491865-22
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: address_aud
+  - changeSet:
+      id: 1729251491865-23
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: audit
+  - changeSet:
+      id: 1729251491865-24
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: audit_aud
+  - changeSet:
+      id: 1729251491865-25
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: location_aud
+  - changeSet:
+      id: 1729251491865-26
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: organizations_aud
+  - changeSet:
+      id: 1729251491865-27
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: person_aud
+  - changeSet:
+      id: 1729251491865-28
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: product_aud
+  - changeSet:
+      id: 1729251491865-29
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: spring_session
+  - changeSet:
+      id: 1729251491865-30
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: spring_session_attributes
+  - changeSet:
+      id: 1729251491865-31
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropTable:
+            cascadeConstraints: true
+            tableName: user_aud
+

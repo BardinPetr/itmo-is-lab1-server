@@ -13,6 +13,7 @@ data class Person(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long,
 
+    @Column(nullable = false)
     @field:NotBlank
     @field:NotNull
     var name: String,
