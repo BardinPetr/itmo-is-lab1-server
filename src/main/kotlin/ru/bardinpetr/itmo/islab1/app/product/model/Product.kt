@@ -1,10 +1,10 @@
 package ru.bardinpetr.itmo.islab1.app.product.model
 
 import jakarta.persistence.*
-import org.hibernate.envers.Audited
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Positive
+import org.hibernate.envers.Audited
 import org.hibernate.validator.constraints.Length
 import ru.bardinpetr.itmo.islab1.app.organization.model.Organization
 import ru.bardinpetr.itmo.islab1.app.person.model.Person
@@ -13,13 +13,8 @@ import java.time.LocalDate
 
 @Entity
 @Audited
-@Table(name = "product", uniqueConstraints = [UniqueConstraint(columnNames = ["partNumber"])])
-data class Product(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @field:Positive
-    var id: Long,
-
+@Table(name = "product")
+class Product(
     @field:NotBlank
     @field:NotNull
     var name: String,
@@ -49,12 +44,17 @@ data class Product(
     @field:NotNull
     var rating: Long,
 
+    @Column(name = "part_number", unique = true)
     @field:Length(min = 22)
     @field:NotNull
     var partNumber: String,
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id")
-    var owner: Person? = null
+    var owner: Person? = null,
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null
 )
 

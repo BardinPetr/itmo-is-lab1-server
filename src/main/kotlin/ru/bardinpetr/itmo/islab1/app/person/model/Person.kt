@@ -1,18 +1,16 @@
 package ru.bardinpetr.itmo.islab1.app.person.model
 
-import ru.bardinpetr.itmo.islab1.app.location.model.Location
 import jakarta.persistence.*
+import jakarta.validation.constraints.NotBlank
+import jakarta.validation.constraints.NotNull
+import jakarta.validation.constraints.Positive
 import org.hibernate.envers.Audited
-import jakarta.validation.constraints.*
+import ru.bardinpetr.itmo.islab1.app.location.model.Location
 
 @Entity
 @Audited
 @Table(name = "person")
-data class Person(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
-
+class Person(
     @Column(nullable = false)
     @field:NotBlank
     @field:NotNull
@@ -34,6 +32,10 @@ data class Person(
     var height: Double,
 
     @Enumerated(EnumType.STRING)
-    var nationality: Country? = null
+    var nationality: Country? = null,
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null
 )
 

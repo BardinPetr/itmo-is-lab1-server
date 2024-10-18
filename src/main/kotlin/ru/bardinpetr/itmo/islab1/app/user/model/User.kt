@@ -1,17 +1,13 @@
 package ru.bardinpetr.itmo.islab1.app.user.model
 
 import jakarta.persistence.*
-import org.hibernate.envers.Audited
 import jakarta.validation.constraints.NotBlank
+import org.hibernate.envers.Audited
 
 @Entity
 @Audited
 @Table(name = "user")
-data class User(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
-
+class User(
     @field:NotBlank
     var username: String,
 
@@ -19,5 +15,9 @@ data class User(
     var passwordHash: String,
 
     @Enumerated(EnumType.STRING)
-    var role: UserRole
+    var role: UserRole,
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null
 )
