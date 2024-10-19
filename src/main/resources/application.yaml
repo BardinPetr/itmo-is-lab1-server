@@ -1,7 +1,4 @@
 spring:
-  application:
-    name: lab1
-
   jpa:
     generate-ddl: true
     hibernate:
@@ -31,6 +28,8 @@ spring:
     rest:
       detection-strategy: annotated
       base-path: /api
+      max-page-size: 100
+      default-page-size: 10
 
   session:
     store-type: jdbc
@@ -53,3 +52,6 @@ security:
   basic:
     enable: false
   ignored: /**
+
+server:
+  address: 0.0.0.0

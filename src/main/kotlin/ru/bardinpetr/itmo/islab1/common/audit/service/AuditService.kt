@@ -1,11 +1,11 @@
-package ru.bardinpetr.itmo.islab1.app.audit.service
+package ru.bardinpetr.itmo.islab1.common.audit.service
 
 import org.hibernate.envers.AuditReader
 import org.hibernate.envers.query.AuditEntity
 import org.hibernate.envers.query.AuditQuery
 import org.springframework.stereotype.Service
-import ru.bardinpetr.itmo.islab1.app.audit.model.AuditLogEntry
-import ru.bardinpetr.itmo.islab1.app.audit.model.typedResultList
+import ru.bardinpetr.itmo.islab1.common.audit.model.AuditLogEntry
+import ru.bardinpetr.itmo.islab1.common.audit.model.typedResultList
 import kotlin.reflect.KClass
 
 @Service

@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Positive
 import org.hibernate.envers.Audited
 import org.hibernate.validator.constraints.Length
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 import ru.bardinpetr.itmo.islab1.app.organization.model.Organization
 import ru.bardinpetr.itmo.islab1.app.person.model.Person
 import ru.bardinpetr.itmo.islab1.app.person.model.UnitOfMeasure
@@ -55,6 +56,6 @@ class Product(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
-)
+    override var id: Long? = null
+) : ICommonEntity<Long>
 

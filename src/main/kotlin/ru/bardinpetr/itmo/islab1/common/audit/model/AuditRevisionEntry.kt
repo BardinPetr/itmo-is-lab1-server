@@ -1,12 +1,15 @@
-package ru.bardinpetr.itmo.islab1.app.audit.model
+package ru.bardinpetr.itmo.islab1.common.audit.model
 
 import jakarta.persistence.*
 import org.hibernate.envers.RevisionEntity
 import org.hibernate.envers.RevisionNumber
 import org.hibernate.envers.RevisionTimestamp
-import ru.bardinpetr.itmo.islab1.app.audit.service.AuditListener
+import ru.bardinpetr.itmo.islab1.common.audit.service.AuditListener
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 import java.time.Instant
 
+
+typealias RevisionIdType = Long
 
 @Entity
 @RevisionEntity(AuditListener::class)
@@ -23,5 +26,5 @@ class AuditRevisionEntry(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @RevisionNumber
-    var id: Long? = null
-)
+    override var id: RevisionIdType? = null
+) : ICommonEntity<RevisionIdType>

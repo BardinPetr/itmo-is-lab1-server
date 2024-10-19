@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1729334726459-13
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: user_id
+                  type: BIGINT
+            tableName: rev_info
+  - changeSet:
+      id: 1729334726459-14
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addNotNullConstraint:
+            columnName: user_id
+            tableName: rev_info
+  - changeSet:
+      id: 1729334726459-21
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropForeignKeyConstraint:
+            baseTableName: spring_session_attributes
+            constraintName: spring_session_attributes_fk
+  - changeSet:
+      id: 1729334726459-24
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropColumn:
+            columnName: username
+            tableName: rev_info
+

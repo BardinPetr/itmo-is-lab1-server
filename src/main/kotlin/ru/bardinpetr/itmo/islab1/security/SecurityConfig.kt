@@ -37,7 +37,7 @@ class SecurityConfig {
                         AntPathRequestMatcher("/docs/*"),
                         AntPathRequestMatcher("/swagger-ui/*")
                     ).permitAll()
-                    .anyRequest().authenticated()
+                    .anyRequest().permitAll() //.authenticated()
             }
             .build()
     }

@@ -3,6 +3,7 @@ package ru.bardinpetr.itmo.islab1.app.user.model
 import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
 import org.hibernate.envers.Audited
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 
 @Entity
 @Audited
@@ -19,5 +20,5 @@ class User(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
-)
+    override var id: Long? = null
+) : ICommonEntity<Long>

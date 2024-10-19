@@ -1,4 +1,4 @@
-package ru.bardinpetr.itmo.islab1.app.audit.model
+package ru.bardinpetr.itmo.islab1.common.audit.model
 
 import org.hibernate.envers.RevisionType
 import org.hibernate.envers.query.AuditQuery

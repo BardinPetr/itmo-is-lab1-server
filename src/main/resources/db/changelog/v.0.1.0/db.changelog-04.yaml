@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1729262767044-1
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - dropColumn:
+            columnName: timestamp
+            tableName: rev_info
+  - changeSet:
+      id: 1729262767044-2
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  constraints:
+                    nullable: false
+                    validateNullable: true
+                  name: timestamp
+                  type: DATETIME
+                  defaultValueComputed: "NOW()"
+            tableName: rev_info
+  - changeSet:
+      id: 1729262767044-3
+      author: Bardin Petr
+      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
+      changes:
+        - addNotNullConstraint:
+            columnDataType: VARCHAR(255)
+            columnName: username
+            tableName: rev_info
+            validate: true
+

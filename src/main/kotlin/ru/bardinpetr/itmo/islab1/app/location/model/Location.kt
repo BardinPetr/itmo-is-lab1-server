@@ -4,6 +4,7 @@ import jakarta.persistence.*
 import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
 import org.hibernate.envers.Audited
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 
 @Entity
 @Audited
@@ -21,5 +22,5 @@ class Location(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
-)
+    override var id: Long? = null
+) : ICommonEntity<Long>

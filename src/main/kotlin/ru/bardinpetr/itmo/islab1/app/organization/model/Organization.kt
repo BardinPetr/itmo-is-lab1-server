@@ -7,6 +7,7 @@ import jakarta.validation.constraints.Positive
 import jakarta.validation.constraints.PositiveOrZero
 import org.hibernate.envers.Audited
 import org.hibernate.validator.constraints.Length
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 
 @Entity
 @Audited
@@ -40,5 +41,5 @@ class Organization(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
-)
+    override var id: Long? = null
+) : ICommonEntity<Long>

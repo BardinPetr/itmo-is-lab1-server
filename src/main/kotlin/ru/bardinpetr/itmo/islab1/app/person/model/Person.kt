@@ -5,6 +5,7 @@ import jakarta.validation.constraints.NotBlank
 import jakarta.validation.constraints.NotNull
 import jakarta.validation.constraints.Positive
 import org.hibernate.envers.Audited
+import ru.bardinpetr.itmo.islab1.common.models.ICommonEntity
 import ru.bardinpetr.itmo.islab1.app.location.model.Location
 
 @Entity
@@ -36,6 +37,6 @@ class Person(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
-)
+    override var id: Long? = null
+) : ICommonEntity<Long>
 

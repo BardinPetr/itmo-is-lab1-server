@@ -8,10 +8,11 @@ plugins {
     id("org.openapi.generator") version "7.1.0"
     id("org.liquibase.gradle") version "2.2.0"
     kotlin("plugin.jpa") version "1.9.25"
+    kotlin("plugin.allopen") version "2.0.21"
 }
 
 group = "ru.bardinpetr.itmo"
-version = "0.1.0"
+version = "0.2.0"
 
 
 configurations {
@@ -40,7 +41,7 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
     implementation("org.modelmapper:modelmapper:3.2.0")
     implementation("org.hibernate:hibernate-envers:7.0.0.Beta1")
-//    implementation("org.springframework.data:spring-data-envers")
+    implementation("org.springframework.data:spring-data-envers")
 
     // security
     implementation("org.springframework.boot:spring-boot-starter-security")
@@ -71,6 +72,10 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.addAll("-Xjsr305=strict")
     }
+}
+
+allOpen {
+    annotations("jakarta.persistence.Entity", "jakarta.persistence.Embeddable")
 }
 
 tasks.withType<Test> {

@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 1729251491865-1
+      id: 1729256015643-1
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -31,7 +31,7 @@ databaseChangeLog:
                   type: BIGINT
             tableName: address_audit
   - changeSet:
-      id: 1729251491865-2
+      id: 1729256015643-2
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -68,7 +68,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
             tableName: location_audit
   - changeSet:
-      id: 1729251491865-3
+      id: 1729256015643-3
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -114,7 +114,7 @@ databaseChangeLog:
                   type: BIGINT
             tableName: organizations_audit
   - changeSet:
-      id: 1729251491865-4
+      id: 1729256015643-4
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -157,7 +157,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
             tableName: person_audit
   - changeSet:
-      id: 1729251491865-5
+      id: 1729256015643-5
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -219,7 +219,7 @@ databaseChangeLog:
                   type: INT
             tableName: product_audit
   - changeSet:
-      id: 1729251491865-6
+      id: 1729256015643-6
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -253,7 +253,7 @@ databaseChangeLog:
                   type: VARCHAR(255)
             tableName: user_audit
   - changeSet:
-      id: 1729251491865-7
+      id: 1729256015643-7
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -264,7 +264,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-8
+      id: 1729256015643-8
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -275,7 +275,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-9
+      id: 1729256015643-9
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -286,7 +286,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-10
+      id: 1729256015643-10
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -297,7 +297,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-11
+      id: 1729256015643-11
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -308,7 +308,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-12
+      id: 1729256015643-12
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -319,7 +319,7 @@ databaseChangeLog:
             referencedColumnNames: rev
             referencedTableName: revinfo
   - changeSet:
-      id: 1729251491865-13
+      id: 1729256015643-13
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -327,7 +327,7 @@ databaseChangeLog:
             baseTableName: address_aud
             constraintName: fk_address_aud_on_rev
   - changeSet:
-      id: 1729251491865-14
+      id: 1729256015643-14
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -335,7 +335,7 @@ databaseChangeLog:
             baseTableName: audit_aud
             constraintName: fk_audit_aud_on_rev
   - changeSet:
-      id: 1729251491865-15
+      id: 1729256015643-15
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -343,7 +343,7 @@ databaseChangeLog:
             baseTableName: audit
             constraintName: fk_audit_on_user
   - changeSet:
-      id: 1729251491865-16
+      id: 1729256015643-16
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -351,7 +351,7 @@ databaseChangeLog:
             baseTableName: location_aud
             constraintName: fk_location_aud_on_rev
   - changeSet:
-      id: 1729251491865-17
+      id: 1729256015643-17
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -359,7 +359,7 @@ databaseChangeLog:
             baseTableName: organizations_aud
             constraintName: fk_organizations_aud_on_rev
   - changeSet:
-      id: 1729251491865-18
+      id: 1729256015643-18
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -367,7 +367,7 @@ databaseChangeLog:
             baseTableName: person_aud
             constraintName: fk_person_aud_on_rev
   - changeSet:
-      id: 1729251491865-19
+      id: 1729256015643-19
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -375,7 +375,7 @@ databaseChangeLog:
             baseTableName: product_aud
             constraintName: fk_product_aud_on_rev
   - changeSet:
-      id: 1729251491865-20
+      id: 1729256015643-20
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -383,15 +383,7 @@ databaseChangeLog:
             baseTableName: user_aud
             constraintName: fk_user_aud_on_rev
   - changeSet:
-      id: 1729251491865-21
-      author: Bardin Petr
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - dropForeignKeyConstraint:
-            baseTableName: spring_session_attributes
-            constraintName: spring_session_attributes_fk
-  - changeSet:
-      id: 1729251491865-22
+      id: 1729256015643-22
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -399,7 +391,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: address_aud
   - changeSet:
-      id: 1729251491865-23
+      id: 1729256015643-23
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -407,7 +399,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: audit
   - changeSet:
-      id: 1729251491865-24
+      id: 1729256015643-24
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -415,7 +407,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: audit_aud
   - changeSet:
-      id: 1729251491865-25
+      id: 1729256015643-25
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -423,7 +415,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: location_aud
   - changeSet:
-      id: 1729251491865-26
+      id: 1729256015643-26
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -431,7 +423,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: organizations_aud
   - changeSet:
-      id: 1729251491865-27
+      id: 1729256015643-27
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -439,7 +431,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: person_aud
   - changeSet:
-      id: 1729251491865-28
+      id: 1729256015643-28
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:
@@ -447,23 +439,7 @@ databaseChangeLog:
             cascadeConstraints: true
             tableName: product_aud
   - changeSet:
-      id: 1729251491865-29
-      author: Bardin Petr
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - dropTable:
-            cascadeConstraints: true
-            tableName: spring_session
-  - changeSet:
-      id: 1729251491865-30
-      author: Bardin Petr
-      objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
-      changes:
-        - dropTable:
-            cascadeConstraints: true
-            tableName: spring_session_attributes
-  - changeSet:
-      id: 1729251491865-31
+      id: 1729256015643-31
       author: Bardin Petr
       objectQuotingStrategy: QUOTE_ONLY_RESERVED_WORDS
       changes:

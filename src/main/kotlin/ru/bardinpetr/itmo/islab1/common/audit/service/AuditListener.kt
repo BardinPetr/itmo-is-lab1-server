@@ -1,7 +1,7 @@
-package ru.bardinpetr.itmo.islab1.app.audit.service
+package ru.bardinpetr.itmo.islab1.common.audit.service
 
 import org.hibernate.envers.RevisionListener
-import ru.bardinpetr.itmo.islab1.app.audit.model.AuditRevisionEntry
+import ru.bardinpetr.itmo.islab1.common.audit.model.AuditRevisionEntry
 
 
 class AuditListener : RevisionListener {
